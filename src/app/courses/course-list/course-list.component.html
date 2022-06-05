@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-title>Courses</mat-card-title>
+    <mat-card-content>
+        <button mat-raised-button color="primary" [routerLink]="['/course-new']">New Course</button>
+
+    </mat-card-content>
+</mat-card>
+
+
+<div class="content">
+    <mat-card *ngFor="let course of courses" class="course-card">
+        <mat-card-title class="title">
+            <p> {{course.title}}</p>
+        </mat-card-title>
+        <mat-card-content>
+            <p >{{course.description}}</p>
+        </mat-card-content>
+        <mat-card-footer>
+            <button class="open-button" mat-raised-button color="primary" target="_self" [routerLink]="['/course',course.id]"> Open </button>
+            <button  mat-raised-button color="warn" (click)="this.deleteCourse(course.id)"> Delete </button>
+        </mat-card-footer>
+    </mat-card>
+</div>

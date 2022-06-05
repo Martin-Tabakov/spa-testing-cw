@@ -1,0 +1,22 @@
+.content{
+    padding: 50px;
+    display: flex;
+    justify-content:left;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.course-card{
+    
+    min-width: 200px;
+    max-width: 500px;
+    min-height: 100px;
+}
+
+.course-card > .title{
+    font-size: 1.2em;
+}
+
+.open-button{
+    margin: 10px;
+}

@@ -1,0 +1,16 @@
+.form {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 150px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.fg {
+    display: grid;
+    grid-template-columns: 200px;
+}
+
+.content {
+    margin: 50px;
+}

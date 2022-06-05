@@ -1,0 +1,40 @@
+<mat-card>
+    <mat-card-title>Courses</mat-card-title>
+    <mat-card-content>
+        <button mat-raised-button color="accent" [routerLink]="['../../courses']">Back</button>
+    </mat-card-content>
+</mat-card>
+
+
+<mat-card class="course-details">
+    <mat-card-title>
+        {{course?.title}}
+    </mat-card-title>
+    <mat-card-content>
+        <p >{{course?.description}}</p>
+    </mat-card-content>
+    <mat-card-footer>
+        <button class="open-button" mat-raised-button color="accent" (click)="switchVisible()"> Edit </button>
+    </mat-card-footer>
+</mat-card>
+
+<form class="form" *ngIf="isVisible" action="" (ngSubmit)="submit()">
+
+    <div class="fg" [formGroup]="form">
+
+    <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+
+
+    </div>
+
+      <button mat-raised-button color="primary" type="submit">Submit Changes</button>
+
+</form>
